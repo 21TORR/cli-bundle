@@ -1,0 +1,50 @@
+{
+	"name": "21torr/cli",
+	"type": "symfony-bundle",
+	"description": "Wrapper around Symfony console, that provides additional helpers + styles.",
+	"homepage": "https://github.com/21TORR/cli-bundle",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "21TORR",
+			"homepage": "https://www.21torr.com/"
+		}
+	],
+	"require": {
+		"php": "^7.4 || ^8.0",
+		"21torr/bundle-helpers": "^2.1",
+		"symfony/console": "^5.2",
+		"symfony/http-kernel": "^5.2"
+	},
+	"require-dev": {
+		"bamarni/composer-bin-plugin": "^1.4",
+		"roave/security-advisories": "dev-latest",
+		"symfony/phpunit-bridge": "^5.2"
+	},
+	"config": {
+		"sort-packages": true
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-next": "1.x-dev"
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"Torr\\Cli\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\Torr\\Cli\\": "tests/"
+		}
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"@composer bin all install --ansi"
+		],
+		"post-update-cmd": [
+			"@composer bin all update --ansi"
+		]
+	}
+}

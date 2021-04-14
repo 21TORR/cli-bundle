@@ -1,0 +1,8 @@
+services:
+    _defaults:
+        autoconfigure: true
+        autowire: true
+
+    Torr\Cli\:
+        resource: ../src/*
+        exclude: ../src/{Exception,CliBundle.php}
