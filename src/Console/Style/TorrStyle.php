@@ -10,8 +10,10 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 
 /**
  * 21TORR-branded CLI style
+ *
+ * @final
  */
-final class TorrStyle extends SymfonyStyle
+class TorrStyle extends SymfonyStyle
 {
 	private const HIGHLIGHT = "red";
 

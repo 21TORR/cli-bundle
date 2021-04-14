@@ -7,8 +7,10 @@ use Symfony\Component\HttpKernel\Profiler\Profiler;
 
 /**
  * Helper class that eases implementation when building commands.
+ *
+ * @final
  */
-final class CommandHelper
+class CommandHelper
 {
 	private ?Profiler $profiler;
 
