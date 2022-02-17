@@ -23,7 +23,7 @@ jobs:
                     coverage: "none"
                     ini-values: "memory_limit=-1"
                     php-version: "${{ matrix.php }}"
-                    tools: "pecl, cs2pr"
+                    tools: "composer, composer-normalize, cs2pr"
 
             -   name: Configure matchers
                 uses: mheap/phpunit-matcher-action@v1
@@ -34,13 +34,8 @@ jobs:
                     php -r 'foreach (get_loaded_extensions() as $extension) echo $extension . " " . phpversion($extension) . PHP_EOL;'
                     php -i
 
-            -   name: Install Composer
-                uses: php-actions/composer@v2
-
             -   name: Composer Normalize
-                uses: "docker://ergebnis/composer-normalize-action:latest"
-                with:
-                    args: "--indent-style tab --indent-size 1 --dry-run --ansi"
+                run: composer-normalize --indent-style tab --indent-size 1 --dry-run --ansi
 
             -   name: PHP CS Fixer
                 run: "./vendor/bin/php-cs-fixer fix --diff --config vendor-bin/test/vendor/21torr/php-cs/.php_cs.dist --dry-run --no-interaction --ansi --format=checkstyle | cs2pr"
