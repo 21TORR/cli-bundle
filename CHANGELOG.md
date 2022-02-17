@@ -1,3 +1,9 @@
+1.0.2
+=====
+
+*   (improvement) Allow Symfony v6.
+
+
 1.0.1
 =====
 

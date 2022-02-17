@@ -22,7 +22,7 @@ class TorrStyle extends SymfonyStyle
 	 */
 	public function title (string $message) : void
 	{
-		$length = Helper::strlenWithoutDecoration($this->getFormatter(), $message) + 4;
+		$length = Helper::width(Helper::removeDecoration($this->getFormatter(), $message)) + 4;
 
 		$this->newLine();
 		$this->writeln(\sprintf(' <fg=%s>╭%s╮</>', self::HIGHLIGHT, \str_repeat("─", $length)));
@@ -37,7 +37,7 @@ class TorrStyle extends SymfonyStyle
 	 */
 	public function section (string $message) : void
 	{
-		$length = Helper::strlenWithoutDecoration($this->getFormatter(), $message);
+		$length = Helper::width(Helper::removeDecoration($this->getFormatter(), $message));
 
 		$this->newLine();
 		$this->writeln([
@@ -77,7 +77,7 @@ class TorrStyle extends SymfonyStyle
 		$this->newLine();
 		$elements = \array_map(
 			static fn ($element) => \sprintf('  <fg=%s>●</> %s', self::HIGHLIGHT, $element),
-			$elements
+			$elements,
 		);
 
 		$this->writeln($elements);
