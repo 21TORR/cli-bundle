@@ -34,6 +34,9 @@ jobs:
                     php -r 'foreach (get_loaded_extensions() as $extension) echo $extension . " " . phpversion($extension) . PHP_EOL;'
                     php -i
 
+            -   name: Install Composer
+                run: composer install --optimize-autoloader --classmap-authoritative --no-interaction
+
             -   name: Composer Normalize
                 run: composer-normalize --indent-style tab --indent-size 1 --dry-run --ansi
 
