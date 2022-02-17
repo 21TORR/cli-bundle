@@ -2,6 +2,7 @@
 =====
 
 *   (improvement) Allow Symfony v6.
+*   (improvement) Only allow PHP v8+
 
 
 1.0.1
