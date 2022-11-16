@@ -1,3 +1,9 @@
+1.0.3
+=====
+
+* (improvement) Allow extension of `TorrStyle`.
+
+
 1.0.2
 =====
 

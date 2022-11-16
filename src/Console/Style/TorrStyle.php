@@ -1,5 +1,4 @@
-<?php
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace Torr\Cli\Console\Style;
 
@@ -10,8 +9,6 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 
 /**
  * 21TORR-branded CLI style
- *
- * @final
  */
 class TorrStyle extends SymfonyStyle
 {
