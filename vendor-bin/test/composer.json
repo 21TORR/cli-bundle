@@ -1,5 +1,5 @@
 {
-    "require": {
+    "require-dev": {
         "21torr/php-cs": "^4.0.4"
     },
     "config": {
