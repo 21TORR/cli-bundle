@@ -3,6 +3,7 @@
 namespace Torr\Cli\Console\Style;
 
 use Symfony\Component\Console\Helper\Helper;
+use Symfony\Component\Console\Helper\ProgressBar;
 use Symfony\Component\Console\Helper\Table;
 use Symfony\Component\Console\Helper\TableStyle;
 use Symfony\Component\Console\Style\SymfonyStyle;
@@ -79,5 +80,18 @@ class TorrStyle extends SymfonyStyle
 
 		$this->writeln($elements);
 		$this->newLine();
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function createProgressBar (
+		int $max = 0,
+		string $format = "' %current%/%max% [%bar%] %percent:3s%% %elapsed:6s%' %message%",
+	) : ProgressBar
+	{
+		$progressBar = parent::createProgressBar($max);
+		$progressBar->setFormat($format);
+		return $progressBar;
 	}
 }

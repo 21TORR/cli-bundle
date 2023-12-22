@@ -1,3 +1,9 @@
+1.1.0
+=====
+
+* (feature) Automatically add "message" to the format of the progress bar. 
+
+
 1.0.3
 =====
 
