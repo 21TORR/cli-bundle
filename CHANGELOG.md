@@ -1,3 +1,10 @@
+1.1.0
+=====
+
+* (feature) Automatically add "message" to the format of the progress bar.
+* (improvement) Allow Symfony 7 and require 6.4+
+
+
 1.0.3
 =====
 
