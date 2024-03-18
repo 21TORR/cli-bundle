@@ -1,3 +1,9 @@
+1.1.1
+=====
+
+* (bug) Remove unintended characters from progress bar format.
+
+
 1.1.0
 =====
 
