@@ -87,7 +87,7 @@ class TorrStyle extends SymfonyStyle
 	 */
 	public function createProgressBar (
 		int $max = 0,
-		string $format = "' %current%/%max% [%bar%] %percent:3s%% %elapsed:6s%' %message%",
+		string $format = " %current%/%max% [%bar%] %percent:3s%% %elapsed:6s% %message%",
 	) : ProgressBar
 	{
 		$progressBar = parent::createProgressBar($max);
