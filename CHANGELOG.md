@@ -2,6 +2,7 @@
 =====
 
 * (feature) Add separate method to disable the Symfony profiler.
+* (improvement) Require PHP 8.3+ and Symfony 7+
 
 
 1.1.1
