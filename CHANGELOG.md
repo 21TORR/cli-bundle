@@ -1,3 +1,9 @@
+1.2.0
+=====
+
+* (feature) Add separate method to disable the Symfony profiler.
+
+
 1.1.1
 =====
 
