@@ -48,6 +48,9 @@ class TorrStyle extends SymfonyStyle
 
 	/**
 	 * @inheritDoc
+	 *
+	 * @param string[] $headers
+	 * @param string[] $rows
 	 */
 	public function table (array $headers, array $rows) : void
 	{
@@ -69,6 +72,8 @@ class TorrStyle extends SymfonyStyle
 
 	/**
 	 * @inheritDoc
+	 *
+	 * @param string[] $elements
 	 */
 	public function listing (array $elements) : void
 	{
