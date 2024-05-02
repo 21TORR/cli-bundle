@@ -11,7 +11,7 @@ jobs:
 
         strategy:
             matrix:
-                php: ['8.2', '8.3']
+                php: ['8.3']
 
         steps:
             -   name: Checkout Code
@@ -24,9 +24,6 @@ jobs:
                     ini-values: "memory_limit=-1"
                     php-version: "${{ matrix.php }}"
                     tools: "composer"
-
-            -   name: Configure matchers
-                uses: mheap/phpunit-matcher-action@v1
 
             -   name: Display versions
                 run: |

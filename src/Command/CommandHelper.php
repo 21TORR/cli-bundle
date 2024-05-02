@@ -23,18 +23,22 @@ class CommandHelper
 
 
 	/**
-	 *
 	 */
 	public function startLongRunningCommand () : void
 	{
-		// disable symfony profiler
-		if (null !== $this->profiler)
-		{
-			$this->profiler->disable();
-		}
+		$this->disableProfiler();
 
 		// increase PHP limits
 		\set_time_limit(0);
 		\ini_set("memory_limit", "-1");
+	}
+
+
+	/**
+	 * Disables the symfony profiler
+	 */
+	public function disableProfiler () : void
+	{
+		$this->profiler?->disable();
 	}
 }
