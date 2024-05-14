@@ -5,6 +5,7 @@ namespace Torr\Cli\Console\Style;
 use Symfony\Component\Console\Helper\Helper;
 use Symfony\Component\Console\Helper\ProgressBar;
 use Symfony\Component\Console\Helper\Table;
+use Symfony\Component\Console\Helper\TableCell;
 use Symfony\Component\Console\Helper\TableStyle;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
@@ -49,8 +50,8 @@ class TorrStyle extends SymfonyStyle
 	/**
 	 * @inheritDoc
 	 *
-	 * @param string[] $headers
-	 * @param string[] $rows
+	 * @param string[]                $headers
+	 * @param array<string|TableCell> $rows
 	 */
 	public function table (array $headers, array $rows) : void
 	{

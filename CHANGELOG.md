@@ -1,3 +1,10 @@
+1.2.1
+=====
+
+* (improvement) Fix too strict PHPDoc types.
+* (internal) Use better CI.
+
+
 1.2.0
 =====
 
