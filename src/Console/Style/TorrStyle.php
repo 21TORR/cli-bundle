@@ -6,6 +6,7 @@ use Symfony\Component\Console\Helper\Helper;
 use Symfony\Component\Console\Helper\ProgressBar;
 use Symfony\Component\Console\Helper\Table;
 use Symfony\Component\Console\Helper\TableCell;
+use Symfony\Component\Console\Helper\TableSeparator;
 use Symfony\Component\Console\Helper\TableStyle;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
@@ -50,8 +51,8 @@ class TorrStyle extends SymfonyStyle
 	/**
 	 * @inheritDoc
 	 *
-	 * @param string[]                $headers
-	 * @param array<string|TableCell> $rows
+	 * @param string[]                                      $headers
+	 * @param array<array<string|TableCell>|TableSeparator> $rows
 	 */
 	public function table (array $headers, array $rows) : void
 	{
