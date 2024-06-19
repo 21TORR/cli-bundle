@@ -25,12 +25,11 @@ class TorrStyle extends SymfonyStyle
 		$length = Helper::width(Helper::removeDecoration($this->getFormatter(), $message)) + 4;
 
 		$this->newLine();
-		$this->writeln(\sprintf(' <fg=%s>╭%s╮</>', self::HIGHLIGHT, \str_repeat("─", $length)));
-		$this->writeln(\sprintf(' <fg=%s>│</>  %s  <fg=red>│</>', self::HIGHLIGHT, $message));
-		$this->writeln(\sprintf(' <fg=%s>╰%s╯</>', self::HIGHLIGHT, \str_repeat("─", $length)));
+		$this->writeln(sprintf(' <fg=%s>╭%s╮</>', self::HIGHLIGHT, str_repeat("─", $length)));
+		$this->writeln(sprintf(' <fg=%s>│</>  %s  <fg=red>│</>', self::HIGHLIGHT, $message));
+		$this->writeln(sprintf(' <fg=%s>╰%s╯</>', self::HIGHLIGHT, str_repeat("─", $length)));
 		$this->newLine();
 	}
-
 
 	/**
 	 * @inheritDoc
@@ -42,17 +41,16 @@ class TorrStyle extends SymfonyStyle
 		$this->newLine();
 		$this->writeln([
 			$message,
-			\sprintf('<fg=%s>%s</>', self::HIGHLIGHT, \str_repeat("─", $length)),
+			sprintf('<fg=%s>%s</>', self::HIGHLIGHT, str_repeat("─", $length)),
 		]);
 		$this->newLine();
 	}
 
-
 	/**
 	 * @inheritDoc
 	 *
-	 * @param string[]                                      $headers
-	 * @param array<array<string|TableCell>|TableSeparator> $rows
+	 * @param string[]                                         $headers
+	 * @param list<list<scalar|TableCell|null>|TableSeparator> $rows
 	 */
 	public function table (array $headers, array $rows) : void
 	{
@@ -71,7 +69,6 @@ class TorrStyle extends SymfonyStyle
 		$this->newLine();
 	}
 
-
 	/**
 	 * @inheritDoc
 	 *
@@ -80,8 +77,8 @@ class TorrStyle extends SymfonyStyle
 	public function listing (array $elements) : void
 	{
 		$this->newLine();
-		$elements = \array_map(
-			static fn ($element) => \sprintf('  <fg=%s>●</> %s', self::HIGHLIGHT, $element),
+		$elements = array_map(
+			static fn ($element) => sprintf('  <fg=%s>●</> %s', self::HIGHLIGHT, $element),
 			$elements,
 		);
 
@@ -99,6 +96,7 @@ class TorrStyle extends SymfonyStyle
 	{
 		$progressBar = parent::createProgressBar($max);
 		$progressBar->setFormat($format);
+
 		return $progressBar;
 	}
 }

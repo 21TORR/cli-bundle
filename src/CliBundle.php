@@ -16,7 +16,6 @@ final class CliBundle extends Bundle
 		return new BundleExtension($this);
 	}
 
-
 	/**
 	 * @inheritDoc
 	 */
