@@ -13,14 +13,12 @@ class CommandHelper
 {
 	private ?Profiler $profiler;
 
-
 	/**
 	 */
 	public function __construct (?Profiler $profiler)
 	{
 		$this->profiler = $profiler;
 	}
-
 
 	/**
 	 */
@@ -29,10 +27,9 @@ class CommandHelper
 		$this->disableProfiler();
 
 		// increase PHP limits
-		\set_time_limit(0);
-		\ini_set("memory_limit", "-1");
+		set_time_limit(0);
+		ini_set("memory_limit", "-1");
 	}
-
 
 	/**
 	 * Disables the symfony profiler
