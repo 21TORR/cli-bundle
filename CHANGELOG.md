@@ -1,3 +1,9 @@
+1.2.3
+=====
+
+* (improvement) Fix parameter type `rows` in `TorrStyle::table` once more.
+
+
 1.2.2
 =====
 

@@ -52,7 +52,7 @@ class TorrStyle extends SymfonyStyle
 	 * @inheritDoc
 	 *
 	 * @param string[]                                      $headers
-	 * @param array<array<string|TableCell>|TableSeparator> $rows
+	 * @param array<array<scalar|null|TableCell>|TableSeparator> $rows
 	 */
 	public function table (array $headers, array $rows) : void
 	{
